@@ -1,4 +1,0 @@
-ip addr add 10.1.1.1/24 dev eth0
-ip addr add 1.1.1.1/32 dev lo
-vtysh -c 'network 10.1.1.0/24 area 0'
-vtysh -c 'network 1.1.1.1/32 area 0'
