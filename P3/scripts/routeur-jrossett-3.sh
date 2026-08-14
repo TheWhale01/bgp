@@ -4,7 +4,7 @@ ip addr add 10.1.1.6/30 dev eth0
 ip addr add 1.1.1.3/32 dev lo
 ip link add br0 type bridge
 ip link set dev br0 up
-ip link add vxlan10 type vxlan id 10 dstport 4789
+ip link add vxlan10 type vxlan id 10 local 1.1.1.3 dstport 4789 nolearning
 ip link set dev vxlan10 up
 brctl addif br0 vxlan10
 brctl addif br0 eth1
