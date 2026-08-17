@@ -28,3 +28,8 @@ Dans ce mode toutes les requetes sont envoyees au groupe VXLAN (239.1.1.1) cela 
 
 Utilisation de BGP EVPN pour eviter le probleme de flood reseau impose par VXLAN. Le principe est simple:
 cartographier le reseau et partager cette carte a tous les routeurs pour eviter le flood.
+
+Voici quelques commandes pour verifier l'apprentissage par BGP EVPN:
+
+Vers quelle interface envoie vxlan10: `bridge fdb show dev vxlan10`
+Route distinguishers: `show bgp l2vpn evpn`
