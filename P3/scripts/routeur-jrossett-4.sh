@@ -11,6 +11,7 @@ brctl addif br0 vxlan10
 brctl addif br0 eth1
 
 # -- router ospf
+# Defintion des reseaux OSPF
 #
 # -- router bgp 1
 # Delcaration des routeurs distants via leur loopbacks

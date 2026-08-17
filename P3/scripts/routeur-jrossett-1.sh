@@ -8,6 +8,7 @@ ip addr add 10.1.1.9/30 dev eth2
 ip addr add 1.1.1.1/32 dev lo
 
 # -- router ospf
+# Defintion des reseaux OSPF
 #
 # -- router bgp 1
 # Delcaration des routeurs distants via leur loopbacks
