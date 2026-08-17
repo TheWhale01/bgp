@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# Declaration du VXLAN (CF. Partie 2)
 ip addr add 10.1.1.10/30 dev eth0
 ip addr add 1.1.1.4/32 dev lo
 ip link add br0 type bridge
@@ -9,6 +10,13 @@ ip link set dev vxlan10 up
 brctl addif br0 vxlan10
 brctl addif br0 eth1
 
+# -- router ospf
+#
+# -- router bgp 1
+# Delcaration des routeurs distants via leur loopbacks
+#
+# -- address-family l2vpn evpn
+# Declaration du route reflector -> Reception de la carte reseau
 vtysh << EOF
 	conf t
 	router ospf

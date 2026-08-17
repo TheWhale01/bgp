@@ -3,8 +3,18 @@
 ip addr add 10.1.1.1/30 dev eth0
 ip addr add 10.1.1.5/30 dev eth1
 ip addr add 10.1.1.9/30 dev eth2
+
+# Assignation IP globale loopback
 ip addr add 1.1.1.1/32 dev lo
 
+# -- router ospf
+#
+# -- router bgp 1
+# Delcaration des routeurs distants via leur loopbacks
+#
+# -- address-family l2vpn evpn
+# Utilisation d'EVPN pour le partage de la carte reseau
+# Activation des route reflectors
 vtysh << EOF
 	conf t
 	router ospf
